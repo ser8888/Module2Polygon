@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sz6-dZ-yte">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,22 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Main Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Module2Polygon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvE-Mp-Rsf">
-                                <rect key="frame" x="16" y="54" width="382" height="45.5"/>
+                                <rect key="frame" x="16" y="150" width="396" height="45.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6D-ZM-fsg">
-                                <rect key="frame" x="92" y="795" width="227" height="47"/>
+                                <rect key="frame" x="92" y="825" width="241" height="47"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -36,10 +36,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="E2E-lX-Lry">
-                                <rect key="frame" x="16" y="115.5" width="382" height="635.5"/>
+                                <rect key="frame" x="16" y="211.66666666666669" width="396" height="635.33333333333326"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nnc-tA-DNa">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="396" height="32"/>
                                         <segments>
                                             <segment title="Первый"/>
                                             <segment title="Второй"/>
@@ -49,24 +49,24 @@
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGn-EG-yuk">
-                                        <rect key="frame" x="0.0" y="71" width="382" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="71.000000000000028" width="396" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ky4-ef-17s">
-                                        <rect key="frame" x="-2" y="131.5" width="386" height="31"/>
+                                        <rect key="frame" x="-2" y="131.33333333333334" width="400" height="31"/>
                                         <connections>
                                             <action selector="sliderction" destination="BYZ-38-t0r" eventType="valueChanged" id="yoe-zs-Wsw"/>
                                         </connections>
                                     </slider>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="введите ваше имя" textAlignment="natural" minimumFontSize="17" background="square.and.arrow.up" catalog="system" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qdx-Ej-VhF">
-                                        <rect key="frame" x="0.0" y="201.5" width="382" height="34"/>
+                                        <rect key="frame" x="0.0" y="201.33333333333334" width="396" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDn-Zy-bK7">
-                                        <rect key="frame" x="0.0" y="275.5" width="382" height="33"/>
+                                        <rect key="frame" x="0.0" y="275.33333333333337" width="396" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Done">
@@ -77,16 +77,16 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="JUL-nV-srz">
-                                        <rect key="frame" x="0.0" y="348.5" width="382" height="31"/>
+                                        <rect key="frame" x="0.0" y="348.33333333333337" width="396" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hide Date Picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUS-zf-TSp">
-                                                <rect key="frame" x="0.0" y="0.0" width="315" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="329" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="87y-yi-qWK">
-                                                <rect key="frame" x="333" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="347" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="swithAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="72Q-1R-Cej"/>
                                                 </connections>
@@ -94,7 +94,7 @@
                                         </subviews>
                                     </stackView>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="cpC-NR-LvE">
-                                        <rect key="frame" x="0.0" y="420" width="382" height="216"/>
+                                        <rect key="frame" x="0.0" y="419.33333333333337" width="396" height="216"/>
                                         <connections>
                                             <action selector="datePickerAction" destination="BYZ-38-t0r" eventType="valueChanged" id="wq7-AN-um7"/>
                                         </connections>
@@ -116,6 +116,13 @@
                             <constraint firstItem="E2E-lX-Lry" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yd2-B0-O9q"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Main Screen" id="mDf-Sr-XUP">
+                        <barButtonItem key="rightBarButtonItem" title="Туда" style="done" id="nsX-dB-4FI">
+                            <connections>
+                                <segue destination="q25-Zz-ZSD" kind="presentation" id="Zch-xD-Mfi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="cpC-NR-LvE" id="SB1-aT-vaf"/>
                         <outlet property="greetingButton" destination="V6D-ZM-fsg" id="wxf-CL-4oN"/>
@@ -129,7 +136,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="54.910714285714285"/>
+            <point key="canvasLocation" x="886.95652173913049" y="54.910714285714285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6ib-ui-Ara">
+            <objects>
+                <viewController id="q25-Zz-ZSD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UWn-bX-Ja7">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yEM-vH-ahh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QRR-mH-1Rh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1619" y="54"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EnL-iu-oPO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sz6-dZ-yte" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="XKL-VQ-VzG">
+                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="y2J-yR-M0S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3R-IV-9Ox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-275" y="55"/>
         </scene>
     </scenes>
     <resources>
@@ -139,6 +179,9 @@
         </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
