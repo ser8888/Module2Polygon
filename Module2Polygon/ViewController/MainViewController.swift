@@ -45,7 +45,22 @@ class MainViewController: UIViewController {
         
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let settingsVC = segue.destination as? SettingsViewController else { return }
+        settingsVC.mainValue = greetingLabel.text
+        settingsVC.notMainValue = mainLabel.text
+    }
+    
     // MARK: - IB Actions
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        // в данном случае source это SettingsViewController так как идет переход назад влево по сигвею
+        guard let settingVC = segue.source as? SettingsViewController else { return }
+        mainLabel.text = settingVC.upperTextField.text
+        greetingLabel.text = settingVC.downTextField.text
+            
+    }
+   
+    
     @IBAction func segmentedControlAction() {
         
         switch segmentedControl.selectedSegmentIndex {
@@ -102,10 +117,6 @@ class MainViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         mainLabel.text = dateFormatter.string(from: datePicker.date)
-        
-        
-        
-        
     }
     
     

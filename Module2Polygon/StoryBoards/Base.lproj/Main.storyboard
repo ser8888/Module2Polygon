@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6D-ZM-fsg">
-                                <rect key="frame" x="92" y="825" width="241" height="47"/>
+                                <rect key="frame" x="92" y="840" width="241" height="47"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -93,7 +93,7 @@
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="cpC-NR-LvE">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="cpC-NR-LvE">
                                         <rect key="frame" x="0.0" y="419.33333333333337" width="396" height="216"/>
                                         <connections>
                                             <action selector="datePickerAction" destination="BYZ-38-t0r" eventType="valueChanged" id="wq7-AN-um7"/>
@@ -107,7 +107,7 @@
                         <constraints>
                             <constraint firstItem="V6D-ZM-fsg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="2po-qU-bUH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E2E-lX-Lry" secondAttribute="trailing" constant="16" id="92c-zY-sSI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V6D-ZM-fsg" secondAttribute="bottom" constant="20" id="Q64-xI-yz6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V6D-ZM-fsg" secondAttribute="bottom" constant="5" id="Q64-xI-yz6"/>
                             <constraint firstItem="wvE-Mp-Rsf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XOK-O0-fg8"/>
                             <constraint firstItem="wvE-Mp-Rsf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="fJb-4E-aQG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V6D-ZM-fsg" secondAttribute="trailing" constant="95" id="ql7-KO-TWJ"/>
@@ -138,20 +138,75 @@
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="54.910714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="6ib-ui-Ara">
             <objects>
-                <viewController id="q25-Zz-ZSD" sceneMemberID="viewController">
+                <viewController id="q25-Zz-ZSD" customClass="SettingsViewController" customModule="Module2Polygon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UWn-bX-Ja7">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="jbB-4D-mqY">
+                                <rect key="frame" x="60" y="104" width="308" height="97"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="введите что-то" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z59-4N-7sr">
+                                        <rect key="frame" x="0.0" y="0.0" width="308" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="введите еще что то" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yTC-fi-ALt">
+                                        <rect key="frame" x="0.0" y="63" width="308" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="A3v-dA-g61">
+                                <rect key="frame" x="170" y="377" width="88" height="118"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiE-k6-bAk">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="47"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <segue destination="d3c-FG-VyR" kind="unwind" unwindAction="unwindFor:" id="9va-26-zRv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjt-hM-6l0">
+                                        <rect key="frame" x="0.0" y="71" width="88" height="47"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed" destination="q25-Zz-ZSD" eventType="touchUpInside" id="Y5t-1B-LEg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="yEM-vH-ahh"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstItem="yEM-vH-ahh" firstAttribute="trailing" secondItem="jbB-4D-mqY" secondAttribute="trailing" constant="60" id="6fB-aB-xCq"/>
+                            <constraint firstItem="jbB-4D-mqY" firstAttribute="top" secondItem="yEM-vH-ahh" secondAttribute="top" constant="60" id="9ye-KU-Gjq"/>
+                            <constraint firstItem="A3v-dA-g61" firstAttribute="centerY" secondItem="UWn-bX-Ja7" secondAttribute="centerY" id="GdQ-NW-ORk"/>
+                            <constraint firstItem="A3v-dA-g61" firstAttribute="centerX" secondItem="UWn-bX-Ja7" secondAttribute="centerX" id="YX0-Xq-Bq7"/>
+                            <constraint firstItem="jbB-4D-mqY" firstAttribute="leading" secondItem="yEM-vH-ahh" secondAttribute="leading" constant="60" id="kv2-Qk-1xg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="downTextField" destination="yTC-fi-ALt" id="kvb-cr-9YM"/>
+                        <outlet property="upperTextField" destination="z59-4N-7sr" id="wkj-Eb-n1X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRR-mH-1Rh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="d3c-FG-VyR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1619" y="54"/>
+            <point key="canvasLocation" x="1617.7570093457944" y="53.779697624190071"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EnL-iu-oPO">
@@ -180,8 +235,14 @@
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
